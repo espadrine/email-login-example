@@ -1,0 +1,22 @@
+{
+  "name": "email-login-example",
+  "description": "Example of login management without password through emails.",
+  "author": "Thaddee Tyl <thaddee.tyl@gmail.com> (http://espadrine.github.com/)",
+  "contributors": [
+    "Thaddee Tyl <thaddee.tyl@gmail.com>"
+  ],
+  "main": "app.js",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/espadrine/email-login-example.git"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "email-login": "~0.0.7",
+    "camp": "~15.7.2"
+  },
+  "readmeFilename": "README.md"
+}

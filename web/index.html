@@ -1,0 +1,14 @@
+<!doctype html><title>EmailLogin Standard Example</title>
+{{if name then {{
+<p> Welcome home, {{= name in html}}!
+</p>
+<form action=/logout>
+  <button>Log Out</button>
+</form>
+}} else {{
+<form action=/signup>
+  <label>email: <input name=email type=email></label><br>
+  <label>nick: <input name=name></label><br>
+  <button>Join</button>
+</form>
+}}}}
