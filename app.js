@@ -53,7 +53,8 @@ camp.route(/^\/$/, function(data, match, end, ask) {
   function(err, authenticated, session) {
     // Set the current identity.
     if (authenticated) {
-      var user = {name: users[session.email].name};
+      var user = users[session.email] || {};
+      user.name = user.name || '[lost name]';
       if (session.emailVerified()) {
         user.email = session.email;
       }
