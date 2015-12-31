@@ -8,7 +8,7 @@ console.log(website);
 
 var EmailLogin = require('email-login');
 var emailLogin = new EmailLogin({
-  directory: './shadow',
+  db: './shadow',
   mailer: secrets.mailer,
 });
 
@@ -29,7 +29,7 @@ camp.route(/^\/signup$/, function(data, match, end, ask) {
     }, function(err) {
       if (err != null) { return end(null, {string:err.stack}); }
       // Sent verification email.
-      end(users[session.email], {template: 'email-sent.html'});
+      end(users[data.email], {template: 'email-sent.html'});
     });
   });
 });
