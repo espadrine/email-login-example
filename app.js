@@ -43,7 +43,7 @@ camp.route(/^\/login$/, function(data, match, end, ask) {
       ask.cookies.set('token', token);
       end(users[session.email], {template: 'email-confirmed.html'});
     } else {
-      end(users[session.email], {template: 'email-not-confirmed.html'});
+      end(null, {template: 'email-not-confirmed.html'});
     }
   });
 });
